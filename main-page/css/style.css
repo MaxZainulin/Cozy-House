@@ -6,7 +6,7 @@ div {
     display: block;
 }
 .main_about-top{
-    background: url(noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
 }
 .header {
     display: flex;
@@ -15,8 +15,15 @@ div {
 }
 .header-menu{
     display: flex;
-    position: relative;
     flex-direction: column;
+}
+.header-logo{
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0;
+    display: flex;
+    display: -webkit-box;
 }
 .header_logo-title {
     font: 400 32px/35px "georgia";
@@ -26,16 +33,17 @@ div {
     margin-top: 60px;
 }
 .header-subtitle{
-    font-size: 13px;
+    letter-spacing: 0.1em;
     font: 400 13px/15px "arial";
-    color: white;
+    color: #FFFFFF;
+}
+.main_header{
+    display: flex;
+    display: -webkit-box;
 }
 .nav-menu{
-    display: flex;
-    position: absolute;
+    margin: 76px 573px;
     justify-content: space-between;
-    right: 250px;
-    top: 76px;
     color: #CDCDCD;
 }
 .header-link a{
@@ -69,12 +77,12 @@ div {
     font-size: 15px;
 }
 .nav-menu ul {
+    position: absolute;
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     display: -webkit-box;
-    align-items: center;
 }
 .main_about-content{
     margin: 223px 930px 42px 40px;
@@ -145,10 +153,7 @@ div {
     color: #545454;
     align-items: center;
     font: 400 35px/45px "georgia";
-    width: 370px;
-    height: 90px;
     display: block;
-    line-height: 130%;
     margin: 94px 275px 25px 0px;
 }
 .about_pets_subtitle p{
@@ -427,4 +432,9 @@ div {
 }
 .footer-item img{
     margin-right: 20px
+}
+@media (min-width: 1280px) {
+    .nav-menu{
+        margin-right: 40px;
+    }
 }
